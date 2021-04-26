@@ -6,7 +6,7 @@ function App() {
   const handleButtonClick = () => {
     setDarkMode(!darkMode);
   };
-  const modeClasses = darkMode ? "bg-success text-white" : "bg-light";
+  const modeClasses = darkMode ? "bg-dark text-white" : "bg-light";
 
   React.useEffect(() => {
     window.localStorage.setItem("darkMode", JSON.stringify(darkMode))
@@ -15,7 +15,7 @@ function App() {
   return (
     <section className={modeClasses}>
     <div className="container my-4">
-        <button onClick={handleButtonClick} className="btn btn-success mb-4">
+        <button onClick={handleButtonClick} className="btn btn-secondary mb-4">
           Dark Mode
         </button>
       <h1 className="text-center">To Do Application</h1>

@@ -77,12 +77,10 @@ const Todos = () => {
 
   useEffect(() => {
     document.title = !(completedCount === todos.length) ? `To Do : ${completedCount}/${todos.length} 😁 ` : "To Do fini ! 🤩";
-  }, [todos]);
-
+  }, [todos, completedCount]);
   useEffect(() => {
     localStorage.setItem("list-todo", JSON.stringify(todos))
-  }, [todos])
-
+  },[todos])
   return (
     <main>
       <h2 className="text-center">
