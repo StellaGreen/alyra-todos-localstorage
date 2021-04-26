@@ -6,7 +6,7 @@ function App() {
   const handleButtonClick = () => {
     setDarkMode(!darkMode);
   };
-  const modeClasses = darkMode ? "bg-dark text-white" : "bg-light";
+  const modeClasses = darkMode ? "bg-success text-white" : "bg-light";
 
   React.useEffect(() => {
     window.localStorage.setItem("darkMode", JSON.stringify(darkMode))
